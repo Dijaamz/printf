@@ -1,21 +1,19 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <stdio.h>
 #include <stdarg.h>
-#include <stdlib.h>
 #include <unistd.h>
-#include <string.h>
+#include <stdarg.h>
 
 int _printf(const char *format, ...);
-void my_utoa_hex_lowercase(unsigned int value, char *str);
-void my_utoa_hex_uppercase(unsigned int value, char *str);
-void my_utoa_hex(unsigned int value, char *str, int uppercase);
-size_t my_strlen(const char *s);
-void my_itoa(int value, char *str);
-void my_utoa(unsigned int value, char *str);
-void my_utoa_octal(unsigned int value, char *str);
+int handle_format(char c, va_list args);
+int print_char(char c);
+int print_string(char *s);
+int print_percent(void);
+int print_integer(int n);
+int print_uns(unsigned int n);
+int print_octal(unsigned int n);
+int print_hex(unsigned int n, int uppercase);
+int print_pointer(void *p);
 
-
-
-#endif
+#endif /* MAIN_H */
