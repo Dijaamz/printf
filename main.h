@@ -15,5 +15,6 @@ int print_uns(unsigned int n);
 int print_octal(unsigned int n);
 int print_hex(unsigned int n, int uppercase);
 int print_pointer(void *p);
+int print_binary(unsigned int n);
 
 #endif /* MAIN_H */

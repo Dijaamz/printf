@@ -11,6 +11,8 @@ int handle_format(char c, va_list args)
 {
 	switch (c)
 	{
+                case 'b': 
+                        return (print_binary(va_arg(args, unsigned int)));
 		case 'c':
 			return (print_char(va_arg(args, int)));
 		case 's':
