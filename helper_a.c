@@ -59,3 +59,33 @@ int print_pointer(void *p)
 
 	return (count);
 }
+
+/**
+ * print_binary - prints an unsigned integer in binary format
+ * @n: unsigned integer to print
+ *
+ * Return: number of characters printed
+ */
+int print_binary(unsigned int n)
+{
+	char buffer[100];
+	int i = 0, j;
+
+	if (n == 0)
+	{
+		write(1, "0", 1);
+		return (1);
+	}
+
+	while (n > 0)
+	{
+		buffer[i] = (n % 2) + '0';
+		n /= 2;
+		i++;
+	}
+
+	for (j = i - 1; j >= 0; j--)
+		write(1, &buffer[j], 1);
+
+	return (i);
+}
